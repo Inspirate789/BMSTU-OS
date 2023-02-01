@@ -1,0 +1,67 @@
+
+                  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+                      SOURCER DEFINITION FILE - TESTYN
+                  ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+
+
+ ±±±±±±±±±±±±±±±±±± Section 1: CONTROL INFORMATION   ±±±±±±±±±±±±±±±±±±
+
+2nd Options flags  = A B C
+Input filename     = testyn.exe
+Header             = TESTYN with definition file
+Up                 = Pentium
+Xref               = ON
+
+
+
+ ±±±±±±±±±±±±±±±±±± Section 2: RANGE DEFINITION      ±±±±±±±±±±±±±±±±±±
+
+ ±±±± Segments ±±±±±±±±±±±±±±±±±±±±±±±±±±
+
+  begin      end      default      seg   seg
+ seg:off     off     ds     es     type  size
+ -------     ----    ----   ----   ----- -----
+none                                           ; comments in this area ignored
+
+
+   ±±±±±±±±±±±±±±±±±± Section 3  REFERENCE DEFINITIONS ±±±±±±±±±±±±±±±±±±
+
+
+ ÍÍÍÍ Subroutines ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+  seg:off   type & options     label           comments
+  -------   --------------     --------------  --------------
+seg_c:0     sub, far, c 2      beeper          ; beep subroutine (3rd segment)
+seg_c:2F    sub, c 3           delay
+seg_c:6D    sub                read_timer      READ_TIMER   ax = return of timer 0 count
+
+
+ ÍÍÍÍ Locations        ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+  seg:off   type & options     label           comments
+  -------   --------------     --------------  --------------
+seg_a:40    loc, c 04          begin_program
+seg_a:66    loc                y_pressed
+seg_a:6A    loc                n_pressed
+seg_a:6C    loc                exit
+seg_c:11    loc                cycle_loop
+seg_c:3F    loc                delay_loop
+seg_c:5D    loc                timer_rolled
+seg_c:62    loc                delay_complete
+
+seg_c:0     indexed, bp
+=6          d?                 tone_cycles     total cycles of on/off times
+=8          d?                 tone_duration   each cycle speaker on & off time
+seg_c:2F    indexed, bp
+=4          d?                 delay_count     number of timer 0 ticks to wait
+=-2         d?                 timer_count     temporary storage
+
+seg_c:14    forced, comment                    turn speaker on
+seg_c:20    forced, comment                    turn speaker off
+
+ ÍÍÍÍ Data Items ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+  seg:off   type & options     label           comments
+  -------   --------------     --------------  --------------
+seg_a:2E    da, r $            yes_no_message
+seg_c:7E    dw, c 6            speaker_port
+seg_c:80    dw, c 7            timer_0_port
+
+

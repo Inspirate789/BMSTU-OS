@@ -1,0 +1,242 @@
+
+   ÍÍÍÍµ SOURCER DEFAULT DEFINITION FILE ÆÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+
+ ±±±±±±±±±±±±±±±±±± Section 1: CONTROL INFORMATION   ±±±±±±±±±±±±±±±±±±
+
+input filename  = ?           (? = use command line entry if provided)
+
+
+ ±±±±±±±±±±±±±±±±±± Section 2: RANGE DEFINITION      ±±±±±±±±±±±±±±±±±±
+
+  
+ ÍÍÍÍ Segments ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+  
+  begin      end      default      seg   seg  
+ seg:off     off     ds     es     type  size 
+ -------     ----    ----   ----   ----- -----
+none
+
+
+ ±±±±±±±±±±±±±±±±±± Section 3: REFERENCE DEFINITIONS ±±±±±±±±±±±±±±±±±±
+
+  
+ ÍÍÍÍ Subroutines ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+  seg:off   type & options     label           comments
+  -------   --------------     --------------  --------------
+
+  
+ ÍÍÍÍ Locations ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+  seg:off   type & options     label           comments
+  -------   --------------     --------------  --------------
+
+
+ ÍÍÍÍ Data Items ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+  seg:off   type & options     label           comments
+  -------   --------------     --------------  --------------
+0000:0400   dw, Unused         rs232_port_1_   ; Start of primary BIOS RAM
+0000:0402   dw, Unused         rs232_port_2_   ;  These entries are optional and
+0000:0404   dw, Unused         rs232_port_3_   ;  will only show up if referenced
+0000:0406   dw, Unused         rs232_port_4_   ;  by the program under analysis
+0000:0408   dw, Unused         prn_port_1_      
+0000:040A   dw, Unused         prn_port_2_
+0000:040C   dw, Unused         prn_port_3_
+0000:040E   dw, Unused         BIOS_data_seg_
+0000:0410   dw, Unused         equip_bits_
+0000:0412   db, Unused         init_test_flag_
+0000:0413   dw, Unused         main_ram_size_
+0000:0415   dw, Unused         chan_io_size_
+0000:0417   db, Unused         keybd_flags_1_
+0000:0418   db, Unused         keybd_flags_2_
+0000:0419   db, Unused         keybd_alt_num_
+0000:041A   dw, Unused         keybd_q_head_
+0000:041C   dw, Unused         keybd_q_tail_
+0000:041E   dw, Unused, R 10   keybd_queue_
+0000:043E   db, Unused         dsk_recal_stat_
+0000:043F   db, Unused         dsk_motor_stat_
+0000:0440   db, Unused         dsk_motor_tmr_
+0000:0441   db, Unused         dsk_ret_code_
+0000:0442   db, Unused         dsk_status_1_
+0000:0443   db, Unused         dsk_status_2_
+0000:0444   db, Unused         dsk_status_3_
+0000:0445   db, Unused         dsk_status_4_
+0000:0446   db, Unused         dsk_status_5_
+0000:0447   db, Unused         dsk_status_6_
+0000:0448   db, Unused         dsk_status_7_
+0000:0449   db, Unused         video_mode_
+0000:044A   dw, Unused         video_columns_
+0000:044C   dw, Unused         video_buf_siz_
+0000:044E   dw, Unused         video_segment_
+0000:0450   dw, Unused         vid_curs_pos0_
+0000:0452   dw, Unused         vid_curs_pos1_
+0000:0454   dw, Unused         vid_curs_pos2_
+0000:0456   dw, Unused         vid_curs_pos3_
+0000:0458   dw, Unused         vid_curs_pos4_
+0000:045A   dw, Unused         vid_curs_pos5_
+0000:045C   dw, Unused         vid_curs_pos6_
+0000:045E   dw, Unused         vid_curs_pos7_
+0000:0460   dw, Unused         vid_curs_mode_
+0000:0462   db, Unused         video_page_
+0000:0463   dw, Unused         video_port_
+0000:0465   db, Unused         video_mode_reg_
+0000:0466   db, Unused         video_color_
+0000:0467   dw, Unused         gen_io_ptr_
+0000:0469   dw, Unused         gen_io_seg_
+0000:046B   db, Unused         gen_int_occurd_
+0000:046C   dw, Unused         timer_low_
+0000:046E   dw, Unused         timer_hi_
+0000:0470   db, Unused         timer_rolled_
+0000:0471   db, Unused         keybd_break_
+0000:0472   dw, Unused         warm_boot_flag_
+0000:0474   db, Unused         hdsk_status_1_
+0000:0475   db, Unused         hdsk_count_
+0000:0476   db, Unused         hdsk_head_ctrl_
+0000:0477   db, Unused         hdsk_ctrl_port_
+0000:0478   db, Unused         prn_timeout_1_
+0000:0479   db, Unused         prn_timeout_2_
+0000:047A   db, Unused         prn_timeout_3_
+0000:047B   db, Unused         prn_timeout_4_
+0000:047C   db, Unused         rs232_timeout1_
+0000:047D   db, Unused         rs232_timeout2_
+0000:047E   db, Unused         rs232_timeout3_
+0000:047F   db, Unused         rs232_timeout4_
+0000:0480   dw, Unused         keybd_begin_
+0000:0482   dw, Unused         keybd_end_
+0000:0484   db, Unused         video_rows_
+0000:0485   dw, Unused         video_pixels_
+0000:0487   db, Unused         video_options_
+0000:0488   db, Unused         video_switches_
+0000:0489   db, Unused         video_1_resrvd_
+0000:048A   db, Unused         video_2_resrvd_
+0000:048B   db, Unused         dsk_data_rate_
+0000:048C   db, Unused         hdsk_status_2_
+0000:048D   db, Unused         hdsk_error_
+0000:048E   db, Unused         hdsk_int_flags_
+0000:048F   db, Unused         hdsk_options_
+0000:0490   db, Unused         hdsk0_media_st_
+0000:0491   db, Unused         hdsk1_media_st_
+0000:0492   db, Unused         hdsk0_start_st_
+0000:0493   db, Unused         hdsk1_start_st_
+0000:0494   db, Unused         hdsk0_cylinder_
+0000:0495   db, Unused         hdsk1_cylinder_
+0000:0496   db, Unused         keybd_flags_3_
+0000:0497   db, Unused         keybd_flags_4_
+0000:0498   dw, Unused         timr_wait_off_
+0000:049A   dw, Unused         timr_wait_seg_
+0000:049C   dw, Unused         timer_clk_low_
+0000:049E   dw, Unused         timer_clk_hi_
+0000:04A0   db, Unused         timer_clk_flag_
+0000:04A1   db, Unused         lan_1_
+0000:04A2   db, Unused         lan_2_
+0000:04A3   db, Unused         lan_3_
+0000:04A4   db, Unused         lan_4_
+0000:04A5   db, Unused         lan_5_
+0000:04A6   db, Unused         lan_6_
+0000:04A7   db, Unused         lan_7_
+0000:04A8   dd, Unused         video_sav_tbls_
+0000:04CE   dw, Unused         day_since_1_80_
+0000:0500   db, Unused         prn_scrn_stat_
+
+0040:0000   dw, Unused         rs232_port_1    ; This second set covers items
+0040:0002   dw, Unused         rs232_port_2    ;  accessed with segment 40
+0040:0004   dw, Unused         rs232_port_3
+0040:0006   dw, Unused         rs232_port_4
+0040:0008   dw, Unused         prn_port_1
+0040:000A   dw, Unused         prn_port_2
+0040:000C   dw, Unused         prn_port_3
+0040:000E   dw, Unused         BIOS_data_seg
+0040:0010   dw, Unused         equip_bits
+0040:0012   db, Unused         init_test_flag
+0040:0013   dw, Unused         main_ram_size
+0040:0015   dw, Unused         chan_io_size
+0040:0017   db, Unused         keybd_flags_1
+0040:0018   db, Unused         keybd_flags_2
+0040:0019   db, Unused         keybd_alt_num
+0040:001A   dw, Unused         keybd_q_head
+0040:001C   dw, Unused         keybd_q_tail
+0040:001E   dw, Unused, R 10   keybd_queue
+0040:003E   db, Unused         dsk_recal_stat
+0040:003F   db, Unused         dsk_motor_stat
+0040:0040   db, Unused         dsk_motor_tmr
+0040:0041   db, Unused         dsk_ret_code
+0040:0042   db, Unused         dsk_status_1
+0040:0043   db, Unused         dsk_status_2
+0040:0044   db, Unused         dsk_status_3
+0040:0045   db, Unused         dsk_status_4
+0040:0046   db, Unused         dsk_status_5
+0040:0047   db, Unused         dsk_status_6
+0040:0048   db, Unused         dsk_status_7
+0040:0049   db, Unused         video_mode
+0040:004A   dw, Unused         video_columns
+0040:004C   dw, Unused         video_buf_siz
+0040:004E   dw, Unused         video_segment
+0040:0050   dw, Unused         vid_curs_pos0
+0040:0052   dw, Unused         vid_curs_pos1
+0040:0054   dw, Unused         vid_curs_pos2
+0040:0056   dw, Unused         vid_curs_pos3
+0040:0058   dw, Unused         vid_curs_pos4
+0040:005A   dw, Unused         vid_curs_pos5
+0040:005C   dw, Unused         vid_curs_pos6
+0040:005E   dw, Unused         vid_curs_pos7
+0040:0060   dw, Unused         vid_curs_mode
+0040:0062   db, Unused         video_page
+0040:0063   dw, Unused         video_port
+0040:0065   db, Unused         video_mode_reg
+0040:0066   db, Unused         video_color
+0040:0067   dw, Unused         gen_io_ptr
+0040:0069   dw, Unused         gen_io_seg
+0040:006B   db, Unused         gen_int_occured
+0040:006C   dw, Unused         timer_low
+0040:006E   dw, Unused         timer_hi
+0040:0070   db, Unused         timer_rolled
+0040:0071   db, Unused         keybd_break
+0040:0072   dw, Unused         warm_boot_flag
+0040:0074   db, Unused         hdsk_status_1
+0040:0075   db, Unused         hdsk_count
+0040:0076   db, Unused         hdsk_head_ctrl
+0040:0077   db, Unused         hdsk_ctrl_port
+0040:0078   db, Unused         prn_timeout_1
+0040:0079   db, Unused         prn_timeout_2
+0040:007A   db, Unused         prn_timeout_3
+0040:007B   db, Unused         prn_timeout_4
+0040:007C   db, Unused         rs232_timeout_1
+0040:007D   db, Unused         rs232_timeout_2
+0040:007E   db, Unused         rs232_timeout_3
+0040:007F   db, Unused         rs232_timeout_4
+0040:0080   dw, Unused         keybd_begin
+0040:0082   dw, Unused         keybd_end
+0040:0084   db, Unused         video_rows
+0040:0085   dw, Unused         video_pixels
+0040:0087   db, Unused         video_options
+0040:0088   db, Unused         video_switches
+0040:0089   db, Unused         video_1_reservd
+0040:008A   db, Unused         video_2_reservd
+0040:008B   db, Unused         dsk_data_rate
+0040:008C   db, Unused         hdsk_status_2
+0040:008D   db, Unused         hdsk_error
+0040:008E   db, Unused         hdsk_int_flags
+0040:008F   db, Unused         hdsk_options
+0040:0090   db, Unused         hdsk0_media_st
+0040:0091   db, Unused         hdsk1_media_st
+0040:0092   db, Unused         hdsk0_start_st
+0040:0093   db, Unused         hdsk1_start_st
+0040:0094   db, Unused         hdsk0_cylinder
+0040:0095   db, Unused         hdsk1_cylinder
+0040:0096   db, Unused         keybd_flags_3
+0040:0097   db, Unused         keybd_flags_4
+0040:0098   dw, Unused         timer_wait_off
+0040:009A   dw, Unused         timer_wait_seg
+0040:009C   dw, Unused         timer_clk_low
+0040:009E   dw, Unused         timer_clk_hi
+0040:00A0   db, Unused         timer_clk_flag
+0040:00A1   db, Unused         lan_1
+0040:00A2   db, Unused         lan_2
+0040:00A3   db, Unused         lan_3
+0040:00A4   db, Unused         lan_4
+0040:00A5   db, Unused         lan_5
+0040:00A6   db, Unused         lan_6
+0040:00A7   db, Unused         lan_7
+0040:00A8   dd, Unused         video_sav_tbls
+0040:00CE   dw, Unused         days_since_1_80
+0040:0100   db, Unused         prn_scrn_stat_b
+0050:0000   db, Unused         prn_scrn_stat
+

@@ -1,0 +1,160 @@
+;
+; WIN32 -- Windows 32 bit API functions (those obfuscated by ordinal)
+; for use with Windows Source
+; Copyright (c) 1997,2000 V Communications Inc.  All rights reserved.
+;
+; These exports are VERY OS specific, they will not work for Win NT/2000.
+; Win 9x has a host of such obfuscated functions.
+;
+; KERNEL32.DLL, Windows 95 Kernel 32 Undocumented exports by ordinal
+;               from Matt Pietrek's Win95 Secrets
+
+KERNEL32 . 9	KERNEL32_ord_9
+KERNEL32 . 19	KERNEL32_ord_19
+KERNEL32 . 86	KERNEL32_ord_86
+KERNEL32 . 87	KERNEL32_ord_87
+KERNEL32 . 88	KERNEL32_ord_88
+KERNEL32 . 99	KERNEL32_ord_99
+KERNEL32 . 100	KERNEL32_ord_100
+KERNEL32 . 101	KERNEL32_ord_101
+
+KERNEL32 . 1	VxDCall0
+KERNEL32 . 2	VxDCall1
+KERNEL32 . 3	VxDCall2
+KERNEL32 . 4	VxDCall3
+KERNEL32 . 5	VxDCall4
+KERNEL32 . 6	VxDCall5
+KERNEL32 . 7	VxDCall6
+KERNEL32 . 8	VxDCall7
+
+KERNEL32 . 10	CharToOemA
+KERNEL32 . 11	CharToOemBuffA
+KERNEL32 . 12	OemToCharA
+KERNEL32 . 13	OemToCharBuffA
+KERNEL32 . 14	LoadStringA
+KERNEL32 . 15	wsprintfA
+KERNEL32 . 16	wvsprintfA
+KERNEL32 . 17	CommonUnimpStub
+KERNEL32 . 18	GetProcessDWORD
+
+KERNEL32 . 20	DosFileHandleToWin32Handle
+KERNEL32 . 21	Win32HandleToDosFileHandle
+KERNEL32 . 22	DisposeLZ32Handle
+KERNEL32 . 23	GDIReallyCares
+KERNEL32 . 24	GlobalAlloc16
+KERNEL32 . 25	GlobalLock16
+KERNEL32 . 26	GlobalUnlock16
+KERNEL32 . 27	GlobalFix16
+KERNEL32 . 28	GlobalUnfix16
+KERNEL32 . 29	GlobalWire16
+KERNEL32 . 30	GlobalUnWire16
+KERNEL32 . 31	GlobalFree16
+KERNEL32 . 32	GlobalSize16
+KERNEL32 . 33	HouseCleanLogicallyDeadHandles
+KERNEL32 . 34	GetWin16DOSEnv
+KERNEL32 . 35	LoadLibrary16
+KERNEL32 . 36	FreeLibrary16
+KERNEL32 . 37	GetProcAddress16
+KERNEL32 . 38	AllocMappedBuffer
+KERNEL32 . 39	FreeMappedBuffer
+KERNEL32 . 40	OT_32ThkLSF
+KERNEL32 . 41	ThunkInitLSF
+KERNEL32 . 42	LogApiThkLSF
+KERNEL32 . 43	ThunkInitLS
+KERNEL32 . 44	LogApiThkSL
+KERNEL32 . 45	Common32ThkLS
+KERNEL32 . 46	ThunkInitSL
+KERNEL32 . 47	LogCBThkSL
+KERNEL32 . 48	ReleaseThunkLock
+KERNEL32 . 49	RestoreThunkLock
+
+KERNEL32 . 51	W32S_BackTo32
+KERNEL32 . 52	GetThunkBuff
+KERNEL32 . 53	GetThunkStuff
+KERNEL32 . 54	K32WOWCallback16
+KERNEL32 . 55	K32WOWCallback16Ex
+KERNEL32 . 56	K32WOWGetVDMPointer
+KERNEL32 . 57	WOWHandle32
+KERNEL32 . 58	WOWHandle16
+KERNEL32 . 59	WOWGlobalAlloc16
+KERNEL32 . 60	WOWGlobalLock16
+KERNEL32 . 61	WOWGlobalUnlock16
+KERNEL32 . 62	WOWGlobalFree16
+KERNEL32 . 63	WOWGlobalAllocLock16
+KERNEL32 . 64	WOWGlobalUnlockFree16
+KERNEL32 . 65	WOWGlobalLockSize16
+KERNEL32 . 66	WOWYield16
+KERNEL32 . 67	WOWDirectedYield16
+KERNEL32 . 68	K32WOWGetVDMPointerFix
+KERNEL32 . 69	K32WOWGetVDMPointerUnfix
+KERNEL32 . 70	K32WOWGetDescriptor
+KERNEL32 . 71	IsThreadId
+KERNEL32 . 72	K32RtlLargeIntegerAdd
+KERNEL32 . 73	K32RtlEnlargedIntegerMultiply
+KERNEL32 . 74	K32RtlEnlargedUnsignedMultiply
+KERNEL32 . 75	K32RtlEnlargedUnsignedDivide
+KERNEL32 . 76	K32RtlExtendedLargeIntegerDivide
+KERNEL32 . 77	K32RtlExtendedMagicDivide
+KERNEL32 . 78	K32RtlExtendedIntegerMultiply
+KERNEL32 . 79	K32RtlLargeIntegerShiftLeft
+KERNEL32 . 80	K32RtlLargeIntegerShiftRight
+KERNEL32 . 81	K32RtlLargeIntegerArithmeticShift
+KERNEL32 . 82	K32RtlLargeIntegerNegate
+KERNEL32 . 83	K32RtlLargeIntegerSubtract
+KERNEL32 . 84	K32RtlConvertLongToLargeInteger
+KERNEL32 . 85	K32RtlConvertUlongToLargeInteger
+
+KERNEL32 . 89	FT_PrologPrime
+KERNEL32 . 90	QT_ThunkPrime
+KERNEL32 . 91	PK16FNF
+KERNEL32 . 92	GetPK16SysVar
+KERNEL32 . 93	GetpWin16Lock
+KERNEL32 . 94	_CheckNotSysLevel
+KERNEL32 . 95	ConfirmSysLevel
+KERNEL32 . 96	_ConfirmWin16Lock
+KERNEL32 . 97	EnterSysLevel
+KERNEL32 . 98	LeaveSysLevel
+
+; MSPWL32 Exports named but often used by ordinal
+
+MSPWL32 . 10	OpenPasswordCache
+MSPWL32 . 11	ClosePasswordCache
+MSPWL32 . 12	CreatePasswordCache
+MSPWL32 . 13	CheckCacheVersion
+MSPWL32 . 14	LoadCacheImage
+MSPWL32 . 15	MakeCacheDirty
+MSPWL32 . 16	FindCacheResource
+MSPWL32 . 17	DeleteCacheResource
+MSPWL32 . 18	AddCacheResource
+MSPWL32 . 19	EnumCacheResources
+MSPWL32 . 20	UpdateCacheMRU
+MSPWL32 . 21	SetCachePassword
+MSPWL32 . 22	DeletePasswordCache
+MSPWL32 . 23	GetCacheFileName
+
+; MPR
+
+MPR . 1		NPSCopyNLS@12
+MPR . 2		NPSGetStatusText@8
+MPR . 3		NPSHookMPRA@4
+MPR . 4		NPSUnHookMPRA@12
+MPR . 5		NPSUnHookMeA@8
+MPR . 6		WNetInitialize@0
+MPR . 7		MprSetMasterQueue@4
+MPR . 8		MprInitDirectInterface@0
+MPR . 9		UsrMpr_ThunkData32
+MPR . 12	strncpyf@12
+MPR . 13	strncmpf@12
+MPR . 14	strnicmpf@12
+MPR . 15	strchrf@8
+MPR . 16	strrchrf@8
+MPR . 17	strspnf@8
+MPR . 18	strcspnf@8
+MPR . 19	strncatf@12
+MPR . 20	strstrf@8
+MPR . 21	stristrf@8
+MPR . 22	MemAlloc@4
+MPR . 23	MemReAlloc@8
+MPR . 24	MemFree@4
+MPR . 25	I_IsBadStringPtrA@8
+

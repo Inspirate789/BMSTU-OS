@@ -1,0 +1,94 @@
+
+   ÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛ SOURCER HARDWARE TABLE ÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛ
+
+  ÚÄÄ Hardware and I/O Comments ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+  ³                                                                         ³
+  ³    To delete, add, or change hardware comments, insert a line in        ³
+  ³    this file which begins in column 1.  Include the type, range,        ³
+  ³    optional actions, and comment.  Items below in parentheses () are    ³
+  ³    explanations which should not be included.  Interrupt comments       ³
+  ³    are limited to 30 characters each, and I/O comments 18 characters.   ³
+  ³    All comments begin one space after the semicolon.                    ³
+  ³                                                                         ³
+  ³    To use this file, rename to HARDWARE.TBL and place in the default    ³
+  ³    disk directory, or use the environment -h option to use another      ³
+  ³    drive/path/filename for the hardware comments table.  For example:   ³
+  ³             set vcom=-hd:\sourcer\phoneapp.tbl                          ³
+  ³                                                                         ³
+  ³    Table is free-form, and order is not important.  Lines starting      ³
+  ³    with a space or linefeed are ignored.                                ³
+  ³                                                                         ³
+  ³      Types:    int   interrupt comment                                  ³
+  ³                in    input port comment                                 ³
+  ³                out   output port comment                                ³
+  ³                io    input & output port has same comment               ³
+  ³                rem   remark to insert in output file                    ³
+  ³                                                                         ³
+  ³      Range:    all   for deletion of all types of comments              ³
+  ³                ndos  for deletion of non-standard DOS interrupts        ³
+  ³                      (all interrupts 30h and above)                     ³
+  ³                bios  for deletion of BIOS interrupts 5 to 1Ch           ³
+  ³                #h    specific hex value (h optional, but always hex)    ³
+  ³                                                                         ³
+  ³      Actions:  delete   remove the specified comment (int and io only)  ³
+  ³                -blank-  one single line comment for this type & range   ³
+  ³                ax=func  first line of a multi-line int comment, ax      ³
+  ³                           value is inserted 26 characters from start    ³
+  ³                ah=func  first line of a multi-line int comment, ah      ³
+  ³                           value is inserted 28 characters from start    ³
+  ³                ax=#     simulated ax must equal this value (int only)   ³
+  ³                ah=#     simulated ah must equal this value (int only)   ³
+  ³                al=#     simulated al must equal this value (out only)   ³
+  ³                vd=#:#   virtual device, Windows, dword (int 20h only)   ³
+  ³                          These will be issued as a VxDcall or VxDjmp.   ³
+  ³     EXAMPLES:                                                           ³
+  ³                                                                         ³
+  ³      type range   actions                   comments                    ³
+  ³      --   -----  ---------  ------------------------------------------  ³
+  ³     int    all,  delete       (deletes all interrupt comments)          ³
+  ³     int   ndos,  delete       (delete non-standard DOS interrupts)      ³
+  ³     int   bios,  delete       (deletes BIOS interrupts 5 to 1Ch)        ³
+  ³     int    1Ah,  delete       (deletes interrupt 1A and sub-functions)  ³
+  ³                                                                         ³
+  ³     int     9,              ; keyboard                                  ³
+  ³     int    10h,  ah=func    ; Video Services   ah=func  xxh             ³
+  ³     int    10h,  ax=101Ah   ;  read color page state                    ³
+  ³     int    10h,  ah=15h     ;  get active display parameters            ³
+  ³     int    20h,  vd=1:2C    ;  Replace_existing_sub-func                ³
+  ³     int    20h,  vd=21E:00  ; New Windows Service 21E                   ³
+  ³     int    20h,  vd=21E:2A  ;  Call_When_Task_Switched                  ³
+  ³                                                                         ³
+  ³     io     all,  delete       (delete all in and out port comments)     ³
+  ³     io    37Ah,  delete       (delete in & out port 37Ah comment)       ³
+  ³     io     64h,  al=ADh     ; disable keyboard                          ³
+  ³     out   0F1h,             ; 80287 reset                               ³
+  ³     io    278h,             ; printer-3 data                            ³
+  ³     in    321h,             ; controller status                         ³
+  ³     out   321h,             ; controller reset                          ³
+  ³                                                                         ³
+  ³     NOTES:  Over 500 blank entries are available when EMS is active.    ³
+  ³             Only a limited number of blank entries are available in     ³
+  ³             both the interrupt and I/O port tables if EMS is not used.  ³
+  ³             You may need to delete unneeded entries to make room for a  ³
+  ³             larger number of new entries.  Some of the items which, if  ³
+  ³             deleted, will free many entry slots for new functions:      ³
+  ³                 int  10h     Video BIOS services   (100+ entries)       ³
+  ³                 int  20h     Windows VxD functions (700+ entries)       ³
+  ³                 int  33h     Mouse functions       ( 50+ entries)       ³
+  ³                 int  67h     EMS and VCPI services ( 70+ entries)       ³
+  ³                 io   64h     Keyboard controller   ( 20+ entries)       ³
+  ³                 io   70h     RTC/CMOS registers    ( 30+ entries)       ³
+  ³                 io  3B4h     Video controller      ( 20+ entries)       ³
+  ³                 io  3D4h     Video controller      ( 20+ entries)       ³
+  ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+rem   Hardware table overrides used.
+
+ type range   actions            interrupt comments      
+ --   -----  ---------    ------------------------axal--
+ < < <  start in column 1 !!!!
+
+ type range   actions     I/O port comments
+ --   -----  ---------    ------------------
+ < < <  start in column 1 !!!!
+

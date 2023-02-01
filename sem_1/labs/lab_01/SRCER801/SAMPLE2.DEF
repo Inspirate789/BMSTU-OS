@@ -1,0 +1,38 @@
+  
+		  ฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿
+			  SAMPLE2 DEFINITION FILE
+		  ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+  
+ ฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑ Section 1: CONTROL INFORMATION   ฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑ
+  
+uP               = 8088
+
+
+ ฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑ Section 2: RANGE DEFINITION      ฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑ
+  
+ ออออ Segments ออออออออออออออออออออออออออ
+  
+  begin      end      default      seg   seg   
+ seg:off     off     ds     es     type  size  
+ -------     ----    ----   ----   ----- ----- 
+none
+
+
+ ฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑ Section 3: REFERENCE DEFINITIONS ฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑฑ
+  
+ ออออ Subroutines อออออออออออออออออออออออ
+  seg:off   type & options     label           comments
+  -------   --------------     --------------  --------------
+
+
+  
+ ออออ Locations อออออออออออออออออออออออออ
+  seg:off   type & options     label           comments
+  -------   --------------     --------------  --------------
+  
+
+  
+ ออออ Data Items ออออออออออออออออออออออออ
+  seg:off   type & options     label           comments
+  -------   --------------     --------------  --------------
+

@@ -1,0 +1,280 @@
+
+                  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+                      SOURCER DEFINITION FILE - SAMPLE1
+                  ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+
+
+
+
+ ±±±±±±±±±±±±±±±±±± Section 1: CONTROL INFORMATION   ±±±±±±±±±±±±±±±±±±
+
+ comments are indented one or more spaces
+ ÚÄÄÄ Section 1 instructionsÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³                                                                            ³
+ ³ Enter any of the following options, starting in the 1st column             ³
+ ³  (for no options enter "none" )  Only the first letter of the              ³
+ ³  command is necessary.                                                     ³
+ ³                                                                            ³
+ ³  Analysis option    = xxxxx Any option letters A-Z can be used.  Upper     ³
+ ³                              case indicates turning option on, lower case  ³
+ ³                              turns the option off.   See manual for a      ³
+ ³                              complete list of options.                     ³
+ ³  2nd Options page   = xxxxx Any valid option letters A-Z can be used.      ³
+ ³  Code style         = xxx   Code style types include:                      ³
+ ³                              com, exe, fragment, zero start,               ³
+ ³                              device driver, overlay, special, new EXE,     ³
+ ³                              Windows VxD, PE, or Linear (32-bit)           ³
+ ³  Drive              = x     Disk drive for output (letter a-z)             ³
+ ³  Execute until      = xxx   Execute loaded file until specified address    ³
+ ³                              or interrupt occurrs. Specify one type:       ³
+ ³                              "Unpack done", "int xx", or stop address.     ³
+ ³                              Options include: ", skip relocations" and     ³
+ ³                              ", video reset" and ", anywhere" and          ³
+ ³                              ", use file segs" (see manual)                ³
+ ³  Format             = xxx   Output format ASM or LST for source code or    ³
+ ³                              listing output (LST is the default)           ³
+ ³  Go                         When the .def file has loaded, go              ³
+ ³  Header             = xxx   Enter the ascii header string (32 char max)    ³
+ ³  Input filename     = xxx   Filename for input (may include disk & path)   ³
+ ³  Keep segments      = xxx   When loading a file, use the file defined      ³
+ ³                              segments (FILE), use the def file segments    ³
+ ³                              in section 2 (DEF) or use both (BOTH)         ³
+ ³                              NOTE: Specify this option prior to file input ³
+ ³                              BOTH is the default, used in most cases       ³
+ ³  Label              = xxx   Select label type, Decimal, Zero fill,         ³
+ ³                              Segment & offset, Letter segment & offset     ³
+ ³  Math               = xx    Select math co-processor options ON/OFF/AUTO   ³
+ ³  Narrow             = xx    Select ON/OFF to skip hex instructions in      ³
+ ³                              listings                                      ³
+ ³  Output filename    = xxx   Filename for output (may include drive & path) ³
+ ³  Passes             = x     Select the number of passes from 2 to 9        ³
+ ³  Qualified string   = xxx   Select special string qualifiers,              ³
+ ³                              EURO/JAPANESE/UNICODE                         ³
+ ³  Remark             = xxx   Select remarks to be included: All, None,      ³
+ ³                              Data remarks only, Interrupts & I/O only,     ³
+ ³                              Others only, Except Data, Except Interrupts,  ³
+ ³                              Except Others                                 ³
+ ³  Segment display    = xxx   Set the segment type, OFF/HEX/NAME             ³
+ ³  Target assembler   = xxx   Select the assembler the code may be re-       ³
+ ³                              assembled on.  Options include MASM-4.0,      ³
+ ³                              MASM-5.0, MASM-5.1, MASM-6.0, MASM-6.1,       ³
+ ³                              TASM-1.0, TASM-2.X, TASM-3.0, TASM-3.1,       ³
+ ³                              TASM-3.2, OPTASM, OTHER, or NONE (optional    ³
+ ³                              functional, size or byte match may follow)    ³
+ ³  uP                 = xxx   Select the uP from:                            ³
+ ³                              8088, V20/V30, 80186, 80286, P286, 80386,     ³
+ ³                              P386, 80486, P486, Pentium, or AUTO for       ³
+ ³                              automatic                                     ³
+ ³  Vertical lines     = xxx   For listings, select the number of lines per   ³
+ ³                              page from 10 to 255 (default is 59)           ³
+ ³  Word case style    = xxxx  Set case style UPPER/LOWER/REGISTER            ³
+ ³  Xref               = xx    ON or OFF (selecting ON sets passes to 5)      ³
+ ³  Zap load start     = x:x   Specifies double word start point within file  ³
+ ³                                                                            ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+  
+ ±±±±±±±±±±±±±±±±±± Section 1: CONTROL INFORMATION   ±±±±±±±±±±±±±±±±±±
+  
+        <<<<<  Insert commands here (start in column 1) 
+
+
+
+ ±±±±±±±±±±±±±±±±±± Section 2: RANGE DEFINITION      ±±±±±±±±±±±±±±±±±±
+
+ ÚÄÄÄ Section 2 instructionsÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³                                                                            ³
+ ³  segment:offset = start processing location (hex)                          ³
+ ³                     see note 3 at end on referencing loaded file segments  ³
+ ³                                                                            ³
+ ³  end offset     = ending location for segment                              ³
+ ³                                                                            ³
+ ³  default ds, es = default used when not overwritten by in-line code        ³
+ ³                                                                            ³
+ ³  segment type   = auto  - code/data, full data resolving                   ³
+ ³                   code  - code, limited data resolving                     ³
+ ³                   data  - data, no code processed                          ³
+ ³                   stack - stack, no code processed                         ³
+ ³                   rauto - ROM code/data (same as "auto") in ROM            ³
+ ³                   rcode - ROM code (same as "code") in ROM                 ³
+ ³                                                                            ³
+ ³  segment size   = use16 for 16 bit segments (this is the default)          ³
+ ³                   use32 for 32 bit segments. The text use32 may not be     ³
+ ³                   abbreviated.                                             ³
+ ³                                                                            ³
+ ³  segment number = use a pound symbol followed by up to 3 decimal digits    ³
+ ³                   to specify the segment by number.  Normally used by      ³
+ ³                   Windows Source. (example: #23)                           ³
+ ³                                                                            ³
+ ³  real/virtual   = when using a virtual segment:offset and ending offset    ³
+ ³                   it is necessary to specify where the segments are        ³
+ ³                   loaded into real memory.  Use the Mem=xxxx:xxxx to       ³
+ ³                   specify the real address.                                ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+
+ ±±±± Segments ±±±±±±±±±±±±±±±±±±±±±±±±±±
+  
+                                         ÚÄÄÄÄÄÄ optional ÄÄÄÄÄÄÄ¿
+  begin      end      default      seg   seg    seg   real 
+ seg:off     off     ds     es     type  size   num   memory
+ -------     ----    ----   ----   ----- -----  ----  -----------
+        <<<<<  Insert ranges here (start in column 1) or "none"
+
+
+
+   ±±±±±±±±±±±±±±±±±± Section 3  REFERENCE DEFINITIONS ±±±±±±±±±±±±±±±±±±
+
+ ÚÄÄÄ Section 3 instructionsÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³                                                                            ³
+ ³  segment:offset = absolute location of item (hex)                          ³
+ ³                    see note 3 at end on referencing loaded file segments   ³
+ ³                    optional short-cut:                                     ³
+ ³                       use "+" to indicate next data offset                 ³
+ ³                                                                            ³
+ ³  typ            = type field                                               ³
+ ³                    DB = data byte                                          ³
+ ³                    DW = data word                                          ³
+ ³                    DD = double word                                        ³
+ ³                    DA = ascii text byte(s)                                 ³
+ ³                    DS = data structure                                     ³
+ ³                    SUB = subroutine reference (S can also be used)         ³
+ ³                    LOC = location reference   (L can also be used)         ³
+ ³                    FORCE = forced function    (F can also be used)         ³
+ ³                                                                            ³
+ ³  options (indicate one or more options with a comma separator, except      ³
+ ³           forced functions only can have one option per line)              ³
+ ³                                                                            ³
+ ³     data options:  , C xxx    comment number xxx (from 1 to 3FF)           ³
+ ³                    , EQU      treat label as an equate                     ³
+ ³                    , DUP      duplicate same bytes/words R times           ³
+ ³                    , INDEX    replace a index of the same value            ³
+ ³                    , OSN      offset sub_xxx               (Sub Near)      ³
+ ³                    , OSF      offset sub_xxx, seg sub_xxx  (Sub Far)       ³
+ ³                    , OLN      offset loc_xxx               (Loc Near)      ³
+ ³                    , OLF      offset loc_xxx, seg loc_xxx  (Loc Far)       ³
+ ³                    , ODN      offset data_xxx              (Data Near)     ³
+ ³                    , ODF      offset data_xx, seg data_xx  (Data Far)      ³
+ ³                    , R xxxx   repeat 0 to FFFF, (FFFF bytes max)           ³
+ ³                                 (i.e. dw, R 4    indicates 8 bytes)        ³
+ ³                                 (see manual for additional options)        ³
+ ³                    , SEG      item is a segment name (dw only)             ³
+ ³                    , UNUSED   if item is never referenced, then do not use ³
+ ³                                                                            ³
+ ³      Location      , C xx     comment number xx (from 1 to FF)             ³
+ ³         options:   , EXT      external entry point to program              ³
+ ³                    , FAR      far procedure                                ³
+ ³                    , NEAR     near procedure                               ³
+ ³                              Note: EXT, FAR & NEAR all reset the simulator ³
+ ³                    , UNUSED   if item is never referenced, then do not use ³
+ ³                                                                            ³
+ ³      Subroutine    , C xx     comment number xx (from 1 to FF)             ³
+ ³         options:   , FAR      subroutine is defined as FAR                 ³
+ ³                    , TERM     subroutine terminates (does not return to    ³
+ ³                                 caller)                                    ³
+ ³                    , UNUSED   if item is never referenced, then do not use ³
+ ³                                                                            ³
+ ³       Forced       , ANALYSIS xxxxx    Select different analysis options   ³
+ ³          options:             at any time, with lower case to turn option  ³
+ ³                               off, and upper case to turn option(s) on.    ³
+ ³                    , CODE     switch to code mode                          ³
+ ³                    , COMMENT xxxxxxxxx  A comment may be placed at any     ³
+ ³                               offset within a file, replacing any auto-    ³
+ ³                               matically generated comment                  ³
+ ³                    , DATA     switch to data mode                          ³
+ ³                    , CODE16   switch to 16 bit code mode                   ³
+ ³                    , CODE32   switch to 32 bit code mode                   ³
+ ³                    , ENDP     force a endp to appear after instruction     ³
+ ³                    , AX=xxxx  change the value of any simulation           ³
+ ³                               register ax/bx/cx/dx/bp/si/di/sp             ³
+ ³                                        ds/es/ss/fs/gs                      ³
+ ³                    , EAX=xxxx  change the value of any 32 bit simulation   ³
+ ³                                register eax/ebx/ecx/edx/ebp/esi/edi        ³
+ ³                    , EAx      LEA instruction's reference item type        ³
+ ³                                 EAS for sub, EAL for location, EAD for data³
+ ³                                 optional segment follows                   ³
+ ³                    , IMMEDIATE  force an instrucion with an offset to      ³
+ ³                               an immediate.                                ³
+ ³                    , Ox       convert immediate value to offset            ³
+ ³                               OS for sub, OL for location, OD for data     ³
+ ³                               optional segment follows (cs segment default)³
+ ³                    , REG      display the internal simulation registers    ³
+ ³                                                                            ³
+ ³                            Forced index table analysis for calls & jumps   ³
+ ³                    , SN       table type "offset sub_xx"                   ³
+ ³                    , SF       table type "offset sub_xxx, seg sub_xxx"     ³
+ ³                    , LN       table type "offset loc_xx"                   ³
+ ³                    , LF       table type "offset loc_xxx, seg loc_xxx"     ³
+ ³                           format: "seg_a:xxxx  f, sn 1234:22 34"           ³
+ ³                               where 1234:22 is the location of the table   ³
+ ³                               with 34h entries                             ³
+ ³                                                                            ³
+ ³  label field    = enter label up to 15 characters long (32 chars with EMS; ³
+ ³                     label ignored for forced functions; do not place a     ³
+ ³                     comma before or inside label)                          ³
+ ³                                                                            ³
+ ³  comment field  = a short comment can be included here (64 characters max) ³
+ ³                   if a semi-colon appears, the rest of the line is ignored ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+                                                                               
+   ±±±±±±±±±±±±±±±±±± Section 3  REFERENCE DEFINITIONS ±±±±±±±±±±±±±±±±±±
+
+
+ ÍÍÍÍ Subroutines ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+  seg:off   type & options     label           comments
+  -------   --------------     --------------  --------------
+        <<<<<  Insert new reference definitions here (start in column 1)
+
+
+ ÍÍÍÍ Locations        ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+  seg:off   type & options     label           comments
+  -------   --------------     --------------  --------------
+        <<<<<  Insert new reference definitions here (start in column 1)
+
+
+ ÍÍÍÍ Data Items ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+  seg:off   type & options     label           comments
+  -------   --------------     --------------  --------------
+        <<<<<  Insert new reference definitions here (start in column 1)
+
+
+
+
+ ÚÄÄÄ General Notes ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³  Notes:                                                                   ³
+ ³     1) Must have at least one entry in each section to operate properly.  ³
+ ³          Use "none" if no entries are needed for sections 2 or 3.         ³
+ ³          Separate each section with at least one line with a space in     ³
+ ³          column 1.                                                        ³
+ ³                                                                           ³
+ ³     2) Order of entries within sections 2 & 3 is unimportant.             ³
+ ³                                                                           ³
+ ³     3) When a filename is specified in section 1, it is loaded and the    ³
+ ³         first 250 segments can be referenced as "seg_a" to "seg_z" and    ³
+ ³          "seg_aa" to "seg_az" through to the 250th segment "seg_io".      ³
+ ³          These can be used anywhere a segment is required.  For example   ³
+ ³          a location label can be defined as:                              ³
+ ³                                                                           ³
+ ³                        6234:0124  loc, Ext, C 2  temp_value_a             ³
+ ³                  or:   seg_b:0124 loc, Ext, C 2  temp_value_a             ³
+ ³                                                                           ³
+ ³          The second entry will use the 2nd segment within the loaded file ³
+ ³          An error will be generated if a segment is used beyond those     ³
+ ³          specified by the file load (Consult manual for more information).³
+ ³                                                                           ³
+ ³     4) Section 3 ignores blank lines or lines starting with a space in    ³
+ ³          column 1, or the balance of a line where a semicolon occurs.     ³
+ ³                                                                           ³
+ ³     5) The following examples show acceptable forms for the same function,³
+ ³          a location entry as a external entry point with comment #2:      ³
+ ³                                                                           ³
+ ³          seg_a:0124 loc, Ext, C 2  temp_value_a  ; prefered format        ³
+ ³          seg_a:0124 l, Ext, C 2  temp_value_a                             ³
+ ³          seg_a:0124 l, E, C=2  temp_value_a      ; notes can follow       ³
+ ³          seg_a:0124 l, External, C 2       temp_value_a                   ³
+ ³          seg_a:124  Location, Ext, C 02   temp_value_a                    ³
+ ³          seg_a:124  L, e, c 2 temp_value_a                                ³
+ ³                                                                           ³
+ ³     6) Upper and lower case will have no effect (except for analysis      ³
+ ³          options), but is preserved for labels.                           ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+

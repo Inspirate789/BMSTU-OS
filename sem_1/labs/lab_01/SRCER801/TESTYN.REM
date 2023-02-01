@@ -1,0 +1,122 @@
+
+
+                   ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+                      SOURCER REMARKS FILE - SAMPLE REMARKS
+                   ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+
+
+ ±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± DATA REMARKS ±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+
+        Remarks in this section are linked to the .def  file,  section  3
+        relating to data items.    Remarks  will  appear  in  the  source
+        code output to the right of the data reference  definition.   Each
+        remark can encompass as many lines as needed, up to 34 characters
+        per line.  Each line starts with the 3 digit hex reference number
+        starting at 001 to a maximum of 3FFh (1023 entries).   The number
+        is also entered in the .def file for the particular data item(s).
+
+
+    --------- Data Remarks -----------  -------- comments ignored here --------
+001 This is the remark number 1 
+002 This is another remark
+003 This is the next data remark
+     note how it continues onto three
+     lines ! (indents allowed)
+004 ÛßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßÛ
+    Û Lines starting with a graphics Û
+    Û character will be placed prior Û
+    Û to the line that the data item Û
+    Û comment appears on.            Û
+    Û                                Û
+    Û A line feed will automatically Û
+    Û be place prior  to  and  after Û
+    Û the graphics character area.   Û
+    ÛÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÛ
+    this line is left of data item 4
+005 This is the last data comment !
+006 ÛßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßÛ          Highlight information prior
+    Û  Port Values used in Porgram  Û          to a data item with graphics
+    ÛÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÛ          characters !
+    Port to toggle speaker on & off            (spekaer_port)
+007 Port for timer 0 mode                      (timer_0_port)
+end
+
+
+ ±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± LOCATION REMARKS ±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+
+        Remarks in this section are linked to the .def  file,  section  3
+        relating to location references.   Remarks  will  appear  in  the 
+        source code output as lines prior to  the  location  item.   Each
+        remark can encompass as many lines as needed, up to 76 characters
+        per line.  Each line starts with the 2 digit hex reference number
+        starting at 01 up to a maximum of FEh (254 entries).   The number
+        is entered in the .def file for the particular location item(s).
+
+        relating to location references.   Remarks  will  appear  in  the 
+        source code output as lines prior to  the  location  item.   Each
+        remark can encompass as many lines as needed, up to 76 characters
+        per line.  Each line starts with the 2 digit hex reference number
+        starting at 01 up to a maximum of FEh (254 entries).   The number
+        is entered in the .def file for the particular location item(s).
+
+
+    ----------------------- Location Reference Remarks ------------------------
+01  This is a location reference remark
+
+02  ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍµ GRAPHICS ÆÍÍÍÍÍÍÍÍÍÍÍÍÍ
+
+      ş  All graphics characters are allowed for special highlighting
+
+      ş  Line feeds can be inserted for extra clarity
+ 
+03  Text of each remark begins at column 5 in this file
+
+04  ÄÄÄÄÄ TESTYN OPERATION ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+    Testyn waits for a keystroke "n" or "y", or beeps if any other key has
+    been entered.    When "n" or "y" is entered,  the program exits with a
+    return code 0 for "n", and 1 for "y".
+    
+    It is intended to be used in a batch file when a  yes/no  question  is
+    asked, the errorlevel command can be used to read the return code.
+
+05
+    Line feeds can be placed at the beginning for more separation from  the
+        previous section of code (1 line feed is automatically placed 
+        prior to the remark).  No linefeeds are placed after the remark 
+        unless explicitly done as in these examples.
+
+end
+   
+ ±±±±±±±±±±±±±±±±±±±±±±±±±±±±± SUBROUTINE REMARKS ±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+
+        Remarks in this section are linked to the .def  file,  section  3
+        relating to subroutine references.   Remarks will appear  in  the 
+        source code output as lines prior to the subroutine  item.   Each
+        remark can encompass as many lines as needed, up to 76 characters
+        per line.  Each line starts with the 2 digit hex reference number
+        starting at 01 up to a maximum of FFh (255 entries).   The number
+        is entered in the .def file for a particular subroutine item(s).
+
+
+    ---------------------- Subroutine Reference Remarks -----------------------
+01  This is a subroutine reference remark
+02                                 BEEPER
+         
+        This subroutine generates a beep based on the passed parameters. 
+        Note that the sound and duration are uP speed independent. Some 
+        newer AMI BIOSs, which stray from the IBM standard, uses the 
+        wrong timer 0 mode, which causes the beep sound to be twice as 
+        long (lower pitch).
+02                                 DELAY
+         
+        The passed parameter specifies the number of timer 0 counts to 
+        wait.  When timer 0 in mode 3 (the standard mode) each count
+        represents 0.4 uS of duration.
+end 
+
+
+        NOTES:  1)  Entries must be in consecutive sequential order.
+                2)  Remark characters ";" are automatically inserted.
+                3)  Up to 64,000 lines per remark, 32M max file size.
+

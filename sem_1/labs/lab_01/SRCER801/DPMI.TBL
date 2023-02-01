@@ -1,0 +1,101 @@
+
+
+  ------- DPMI HARDWARE INTERRUPTS -------------------------------------------
+
+  To include these DPMI interrupts,  rename this file HARDWARE.TBL and
+  place into the default directory.   Sourcer will automatically check 
+  if this file exists, and will load these interrupt comments.
+
+  To allow such a long list of interrupts, the EMS interrupt comments 
+  (int 67h) are disabled.    Other interrupts can  be disabled instead 
+  if necessary.  To remove these DPMI interrupts, rename this file so 
+  HARDWARE.TBL does not exist.
+
+
+ type  range     action                     comments
+ ----  -----    --------          ------------------------------
+rem  DPMI hardware interrupt table used
+
+int     67h,    delete          removes all EMS entries to make room for DMPI
+
+int     2Fh,    ax=168Ah        ;  DPMI vendor text string ds:si
+                                 
+int     31h,    ax=func         ; DPMI Services   ax=func xxxxh
+int     31h,    ax=0000h        ;  allocate cx LDT descriptors
+int     31h,    ax=0001h        ;  free LDT descriptor bx
+int     31h,    ax=0002h        ;  convert ax seg to descriptor
+int     31h,    ax=0003h        ;  get selector inc value in ax
+int     31h,    ax=0004h        ;  lock sel in bx (Undoc)
+int     31h,    ax=0005h        ;  unlock sel in bx (Undoc)
+int     31h,    ax=0006h        ;  selector bx to seg base cx:dx
+int     31h,    ax=0007h        ;  set selectr bx seg base cx:dx
+int     31h,    ax=0008h        ;  set selector bx, limit cx:dx
+int     31h,    ax=0009h        ;  set selector bx, access cx
+int     31h,    ax=000Ah        ;  create alias of bx descriptor
+int     31h,    ax=000Bh        ;  copy LDT bx into buffer es:di
+int     31h,    ax=000Ch        ;  copy buffer es:di into LDT bx
+int     31h,    ax=000Dh        ;  allocate LDT bx
+int     31h,    ax=000Eh        ;  get cx LDTs into buffer es:di
+int     31h,    ax=000Fh        ;  set cx LDTs from buffer es:di
+int     31h,    ax=0100h        ;  allocate bx DOS memory
+int     31h,    ax=0101h        ;  free dx memory block
+int     31h,    ax=0102h        ;  resize dx mem block, size bx
+int     31h,    ax=0200h        ;  get real int bl into cx:dx
+int     31h,    ax=0201h        ;  set real int bl to cx:dx
+int     31h,    ax=0202h        ;  get uP exception bl in cx:dx
+int     31h,    ax=0203h        ;  set uP exception bl to cx:dx
+int     31h,    ax=0204h        ;  get protected int bl in cx:dx
+int     31h,    ax=0205h        ;  set protected int bl to cx:dx
+int     31h,    ax=0210h        ;  get extd exceptn bl in cx:dx
+int     31h,    ax=0211h        ;  get extd exceptn bl in cx:dx
+int     31h,    ax=0212h        ;  set extd exceptn bl to cx:dx
+int     31h,    ax=0213h        ;  set extd exceptn bl to cx:dx
+int     31h,    ax=0300h        ;  simulate real mode interrupt
+int     31h,    ax=0301h        ;  call real mode proc, far ret
+int     31h,    ax=0302h        ;  call real mode proc, iret
+int     31h,    ax=0303h        ;  allocate real mode callback
+int     31h,    ax=0304h        ;  free real mode callback cx:dx
+int     31h,    ax=0305h        ;  get state save/restore addr
+int     31h,    ax=0306h        ;  get raw mode switch address
+int     31h,    ax=0400h        ;  get DPMI version ax & info 
+int     31h,    ax=0401h        ;  get DPMI capabilities, es:di
+int     31h,    ax=0500h        ;  get free mem info in es:di  
+int     31h,    ax=0501h        ;  allocate mem block,size bx:cx
+int     31h,    ax=0502h        ;  free mem block, si:di=handle
+int     31h,    ax=0503h        ;  resize mem block si:di
+int     31h,    ax=0504h        ;  allocate linear mem block
+int     31h,    ax=0505h        ;  resize linear mem block
+int     31h,    ax=0506h        ;  get page fault attributes
+int     31h,    ax=0507h        ;  set page attributes
+int     31h,    ax=0508h        ;  map device in memory block
+int     31h,    ax=0509h        ;  map DOS mem in memory block
+int     31h,    ax=050Ah        ;  get mem block size & base
+int     31h,    ax=050Bh        ;  get mem info, ptr es:di
+int     31h,    ax=0600h        ;  lock linear region bx:cx
+int     31h,    ax=0601h        ;  unlock linear region bx:cx
+int     31h,    ax=0602h        ;  mark real mode region pagable
+int     31h,    ax=0603h        ;  relock real mode region bx:cx
+int     31h,    ax=0604h        ;  get page size into bx:cx
+int     31h,    ax=0700h        ;  mark paging canidates (Undoc)
+int     31h,    ax=0701h        ;  discard pages (Undoc)      
+int     31h,    ax=0702h        ;  mark as page-out candidate
+int     31h,    ax=0703h        ;  discard page bx:cx contents
+int     31h,    ax=0800h        ;  get liner from physical bx:cx
+int     31h,    ax=0801h        ;  free physical address mapping
+int     31h,    ax=0900h        ;  get/disable virtual int state
+int     31h,    ax=0901h        ;  get/enable virtual int state
+int     31h,    ax=0902h        ;  get virtual int state in al
+int     31h,    ax=0A00h        ;  get API entry point in es:di
+int     31h,    ax=0B00h        ;  set debug watchpoint at bx:cx
+int     31h,    ax=0B01h        ;  clear debug watchpoint bx
+int     31h,    ax=0B02h        ;  get debug watchpoint bx state
+int     31h,    ax=0B03h        ;  reset debug watchpoint bx
+int     31h,    ax=0C00h        ;  install resident callback 
+int     31h,    ax=0C01h        ;  terminate and stay resident
+int     31h,    ax=0D00h        ;  allocate shared memory es:di
+int     31h,    ax=0D01h        ;  free shared memory si:di
+int     31h,    ax=0D02h        ;  serialize on shared mem si:di
+int     31h,    ax=0D03h        ;  free serialized shared mem
+int     31h,    ax=0E00h        ;  get co-processor status in ax
+int     31h,    ax=0E01h        ;  set co-processor emulation bx
+

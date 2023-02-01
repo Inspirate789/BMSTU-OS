@@ -1,0 +1,176 @@
+
+                             ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+                             ³  Sourcer Notes  ³
+                             ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+
+
+    CONTENTS
+
+        A. Latest New Features (v8)
+        B. Features not in Manual
+        C. Sourcer Files
+        D. Optional Windows Source
+        E. Technical Support
+        F. Ordering Information
+
+
+    A. New Version 8 Features
+
+        Instruction set support for all 80x86 processors including the
+          Pentium II and III.
+
+        Improved instruction set support for Intel's MMX instructions
+
+        Updates for improved results
+
+	New interrupt and I/O port comments
+
+        Includes the BIOS Pre-Processor to examine your BIOS ROMs
+
+	With Windows Source, an additional disassembler is included
+	  for huge PE files
+
+        FREE Utilities!
+		Diff-It - See differences between text or binary files
+		Unpack  - Unpack compressed files
+		COM2EXE - Reconstruct EXE from COM file
+		IntView - View current interrupt vectors with info
+
+
+    B. Features not in the Manual
+
+        The manual is up to date.
+
+
+    C. Sourcer Files
+
+        SR.EXE          Sourcer commenting disassembler executable
+        SRIN.EXE        Installation and Information program
+
+        BIOSP.EXE       Pre-process BIOS ROMs
+        COM2EXE.EXE     Extracts hidden EXE file from COM file
+        DIFFIT.EXE      Show differences between any two files
+        INTVIEW.COM     Interrupt viewer
+        LST2ASM.EXE     Converts listings into assembly
+        PATCH.EXE       Patches any type or size file
+        RUNBIOSP.EXE    Run the BIOS Pre-Processor
+        TESTYN.EXE      Sample program for trying out Sourcer
+        UNPACK.EXE      Unpacks packed EXE files
+
+        DPMI.TBL        List of DPMI comments
+        HARDWARE        Sample hardware comments table
+        NOTES.SR        This notes file
+        SAMPLE1.DEF     Blank definition file with explanations
+        SAMPLE2.DEF     Blank definition file without explanations
+        SDEFAULT.DEF    Default definition file
+        TESTYN.DEF      Sample definition file for TESTYN.EXE
+        TESTYN.REM      Sample remarks file for TESTYN.EXE
+        VCOM.MSG        Product information file
+
+        Windows Source files:
+
+        WINP.EXE        Windows Source program
+
+        DUMPLX.EXE      Extracts information from LE and LX files
+        DUMPNE.EXE      Extracts information from NE files
+        DUMPPE.EXE      Extracts infor from PE files, and disassembler
+        EXEMAP.EXE      Lists imports and exports from a NE file
+        EXEUTIL.EXE     Look at undoc/documented imports and exports
+        EXPORTS.BAT     Create a .DAT file from exports in NE files
+        IMPDUMP.EXE     Extracts new API function names from file
+        LEDUMP.EXE      Process VxDs
+        RESDUMP.EXE     Get resources from NE and PE files
+        VXDLIB.EXE      Manages the VxD library files, W3 and W4
+        WINSMALL.EXE    Example Windows program for disassembly
+        XLAT.EXE        Translate data from a listing fragment
+        DOS4GW.EXE      Enables WINP's 32-bit code
+
+
+        286DOSX.DAT     Phar Lap's 286 | DOS Extender functions
+        DOS6DLL.DAT     DOS functions
+        OS2.DAT         OS/2 functions
+        WFW.DAT         Windows for Workgroups functions
+        WINFUNC.DAT     Generic Windows functions
+        WIN31.DAT       Windows 3.1 functions
+        WIN95.DAT       Windows 95/98/Me functions
+        WIN32.DAT       Windows 32-bit functions
+
+
+    D. Optional Windows Source
+
+        The Windows Source option adds the following capabilities to
+        Sourcer:
+
+         Examine Windows 95/98/Me/NT/2000 and Windows 3.x files
+                16 and 32-bit EXEs and DLLs
+                Device drivers
+                32-bit VxDs
+
+         Examine DOS Extended type files
+                PharLap's 286 | DOS Extender
+                PharLap's TNT Extender
+
+         Examine OS/2 files
+                Both 16 and 32-bit EXEs and DLLs
+                Device drivers
+
+         Labels imports, exports, and APIs by name
+
+         Includes key CodeView symbols when available
+
+         Handles embedded and compressed VxDs
+
+         Identifies and labels other key information
+                WinMain in DLLs
+                control procedures in VxDs
+                services provided by a VxD
+                variables in a NULL segment
+                General protection fault handlers
+                Apploader functions
+
+         Provides comments for all DOS and DPMI calls
+
+         Includes a specal disassembler for huge PE files (DUMPPE)
+
+
+    E. Technical Support
+
+        Before calling for technical support, please check the
+        Troubleshooting section of the Sourcer user manual for
+        messages and common solutions.
+
+        When calling, please have the Sourcer diskette handy, as it
+        has the version and serial number of Sourcer. Telephone
+        technical support is available for no cost for 90 days after
+        purchase.  After this period, support is available at our
+        standard support call rate. Please have your credit card ready
+        when calling. We accept Visa, Master Card, and American
+        Express.
+
+                (408) 965Ä4018  (Tech support)
+
+                WWW.V-COM.COM   (web site)
+
+
+    F. Ordering Information
+
+        To purchase additional copies contact us at:
+
+                V Communications, Inc.
+                2290 North First Street, Suite 101
+                San Jose, CA  95131
+                USA
+
+                (408) 965-4000  (Order desk)
+                (408) 965-4014  (FAX)
+
+        We also offer attractive volume discounts and multiÄsite
+        licenses.  Contact our Sales department for additional
+        information.
+
+
+                     ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+                     ³     End of Notes     ³
+                     ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
