@@ -6,4 +6,4 @@
 
 
 
-### [Материал для подготовки к экзамену](https://puzzling-author-d18.notion.site/2023-7c131671d4dc46c6adf35f198b1e1b4b)
+### [Материал для подготовки к экзамену (1 сем)](https://puzzling-author-d18.notion.site/2023-7c131671d4dc46c6adf35f198b1e1b4b)
