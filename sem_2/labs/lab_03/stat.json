@@ -1,0 +1,675 @@
+{
+    "measuring_time": "2023-03-28 16:58:23",
+    "cwd": "/",
+    "environ": [
+        "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "HOSTNAME=2bde2d9ca7e7",
+        "HOME=/"
+    ],
+    "maps": [
+        {
+            "StartAddr": 4194304,
+            "EndAddr": 8347648,
+            "Perms": {
+                "Read": true,
+                "Write": false,
+                "Execute": true,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 0,
+            "Dev": 65025,
+            "Inode": 1471045,
+            "Pathname": "/backend"
+        },
+        {
+            "StartAddr": 8347648,
+            "EndAddr": 12582912,
+            "Perms": {
+                "Read": true,
+                "Write": false,
+                "Execute": false,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 4153344,
+            "Dev": 65025,
+            "Inode": 1471045,
+            "Pathname": "/backend"
+        },
+        {
+            "StartAddr": 12582912,
+            "EndAddr": 12939264,
+            "Perms": {
+                "Read": true,
+                "Write": true,
+                "Execute": false,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 8388608,
+            "Dev": 65025,
+            "Inode": 1471045,
+            "Pathname": "/backend"
+        },
+        {
+            "StartAddr": 12939264,
+            "EndAddr": 13213696,
+            "Perms": {
+                "Read": true,
+                "Write": true,
+                "Execute": false,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 0,
+            "Dev": 0,
+            "Inode": 0,
+            "Pathname": ""
+        },
+        {
+            "StartAddr": 824633720832,
+            "EndAddr": 824648400896,
+            "Perms": {
+                "Read": true,
+                "Write": true,
+                "Execute": false,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 0,
+            "Dev": 0,
+            "Inode": 0,
+            "Pathname": ""
+        },
+        {
+            "StartAddr": 824648400896,
+            "EndAddr": 824650498048,
+            "Perms": {
+                "Read": true,
+                "Write": true,
+                "Execute": false,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 0,
+            "Dev": 0,
+            "Inode": 0,
+            "Pathname": ""
+        },
+        {
+            "StartAddr": 824650498048,
+            "EndAddr": 824700829696,
+            "Perms": {
+                "Read": false,
+                "Write": false,
+                "Execute": false,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 0,
+            "Dev": 0,
+            "Inode": 0,
+            "Pathname": ""
+        },
+        {
+            "StartAddr": 140479023190016,
+            "EndAddr": 140479062605824,
+            "Perms": {
+                "Read": true,
+                "Write": true,
+                "Execute": false,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 0,
+            "Dev": 0,
+            "Inode": 0,
+            "Pathname": ""
+        },
+        {
+            "StartAddr": 140479062605824,
+            "EndAddr": 140479064702976,
+            "Perms": {
+                "Read": true,
+                "Write": true,
+                "Execute": false,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 0,
+            "Dev": 0,
+            "Inode": 0,
+            "Pathname": ""
+        },
+        {
+            "StartAddr": 140479064702976,
+            "EndAddr": 140479065640960,
+            "Perms": {
+                "Read": true,
+                "Write": true,
+                "Execute": false,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 0,
+            "Dev": 0,
+            "Inode": 0,
+            "Pathname": ""
+        },
+        {
+            "StartAddr": 140479065640960,
+            "EndAddr": 140479339814912,
+            "Perms": {
+                "Read": false,
+                "Write": false,
+                "Execute": false,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 0,
+            "Dev": 0,
+            "Inode": 0,
+            "Pathname": ""
+        },
+        {
+            "StartAddr": 140479339814912,
+            "EndAddr": 140479339819008,
+            "Perms": {
+                "Read": true,
+                "Write": true,
+                "Execute": false,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 0,
+            "Dev": 0,
+            "Inode": 0,
+            "Pathname": ""
+        },
+        {
+            "StartAddr": 140479339819008,
+            "EndAddr": 140479640428544,
+            "Perms": {
+                "Read": false,
+                "Write": false,
+                "Execute": false,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 0,
+            "Dev": 0,
+            "Inode": 0,
+            "Pathname": ""
+        },
+        {
+            "StartAddr": 140479640428544,
+            "EndAddr": 140479640432640,
+            "Perms": {
+                "Read": true,
+                "Write": true,
+                "Execute": false,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 0,
+            "Dev": 0,
+            "Inode": 0,
+            "Pathname": ""
+        },
+        {
+            "StartAddr": 140479640432640,
+            "EndAddr": 140479678005248,
+            "Perms": {
+                "Read": false,
+                "Write": false,
+                "Execute": false,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 0,
+            "Dev": 0,
+            "Inode": 0,
+            "Pathname": ""
+        },
+        {
+            "StartAddr": 140479678005248,
+            "EndAddr": 140479678009344,
+            "Perms": {
+                "Read": true,
+                "Write": true,
+                "Execute": false,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 0,
+            "Dev": 0,
+            "Inode": 0,
+            "Pathname": ""
+        },
+        {
+            "StartAddr": 140479678009344,
+            "EndAddr": 140479682699264,
+            "Perms": {
+                "Read": false,
+                "Write": false,
+                "Execute": false,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 0,
+            "Dev": 0,
+            "Inode": 0,
+            "Pathname": ""
+        },
+        {
+            "StartAddr": 140479682699264,
+            "EndAddr": 140479682703360,
+            "Perms": {
+                "Read": true,
+                "Write": true,
+                "Execute": false,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 0,
+            "Dev": 0,
+            "Inode": 0,
+            "Pathname": ""
+        },
+        {
+            "StartAddr": 140479682703360,
+            "EndAddr": 140479683223552,
+            "Perms": {
+                "Read": false,
+                "Write": false,
+                "Execute": false,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 0,
+            "Dev": 0,
+            "Inode": 0,
+            "Pathname": ""
+        },
+        {
+            "StartAddr": 140479683223552,
+            "EndAddr": 140479683616768,
+            "Perms": {
+                "Read": true,
+                "Write": true,
+                "Execute": false,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 0,
+            "Dev": 0,
+            "Inode": 0,
+            "Pathname": ""
+        },
+        {
+            "StartAddr": 140728588464128,
+            "EndAddr": 140728588599296,
+            "Perms": {
+                "Read": true,
+                "Write": true,
+                "Execute": false,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 0,
+            "Dev": 0,
+            "Inode": 0,
+            "Pathname": "[stack]"
+        },
+        {
+            "StartAddr": 140728589058048,
+            "EndAddr": 140728589074432,
+            "Perms": {
+                "Read": true,
+                "Write": false,
+                "Execute": false,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 0,
+            "Dev": 0,
+            "Inode": 0,
+            "Pathname": "[vvar]"
+        },
+        {
+            "StartAddr": 140728589074432,
+            "EndAddr": 140728589082624,
+            "Perms": {
+                "Read": true,
+                "Write": false,
+                "Execute": true,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 0,
+            "Dev": 0,
+            "Inode": 0,
+            "Pathname": "[vdso]"
+        },
+        {
+            "StartAddr": 18446744073699065856,
+            "EndAddr": 18446744073699069952,
+            "Perms": {
+                "Read": true,
+                "Write": false,
+                "Execute": true,
+                "Shared": false,
+                "Private": true
+            },
+            "Offset": 0,
+            "Dev": 0,
+            "Inode": 0,
+            "Pathname": "[vsyscall]"
+        }
+    ],
+    "pagemap": {
+        "regions": [
+            {
+                "start_addr": 4194304,
+                "end_addr": 8347648,
+                "pages_count": 1014,
+                "present": 902,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 902,
+                "file_page_or_shared_anon": 902,
+                "undefined": 0
+            },
+            {
+                "start_addr": 8347648,
+                "end_addr": 12582912,
+                "pages_count": 1034,
+                "present": 954,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 954,
+                "file_page_or_shared_anon": 954,
+                "undefined": 0
+            },
+            {
+                "start_addr": 12582912,
+                "end_addr": 12939264,
+                "pages_count": 87,
+                "present": 87,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 87,
+                "file_page_or_shared_anon": 66,
+                "undefined": 0
+            },
+            {
+                "start_addr": 12939264,
+                "end_addr": 13213696,
+                "pages_count": 67,
+                "present": 41,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 24,
+                "file_page_or_shared_anon": 0,
+                "undefined": 0
+            },
+            {
+                "start_addr": 824633720832,
+                "end_addr": 824648400896,
+                "pages_count": 3584,
+                "present": 879,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 878,
+                "file_page_or_shared_anon": 0,
+                "undefined": 0
+            },
+            {
+                "start_addr": 824648400896,
+                "end_addr": 824650498048,
+                "pages_count": 512,
+                "present": 0,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 0,
+                "file_page_or_shared_anon": 0,
+                "undefined": 0
+            },
+            {
+                "start_addr": 824650498048,
+                "end_addr": 824700829696,
+                "pages_count": 12288,
+                "present": 0,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 0,
+                "file_page_or_shared_anon": 0,
+                "undefined": 0
+            },
+            {
+                "start_addr": 140479023190016,
+                "end_addr": 140479062605824,
+                "pages_count": 9623,
+                "present": 497,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 493,
+                "file_page_or_shared_anon": 0,
+                "undefined": 0
+            },
+            {
+                "start_addr": 140479062605824,
+                "end_addr": 140479064702976,
+                "pages_count": 512,
+                "present": 0,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 0,
+                "file_page_or_shared_anon": 0,
+                "undefined": 0
+            },
+            {
+                "start_addr": 140479064702976,
+                "end_addr": 140479065640960,
+                "pages_count": 229,
+                "present": 1,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 1,
+                "file_page_or_shared_anon": 0,
+                "undefined": 0
+            },
+            {
+                "start_addr": 140479065640960,
+                "end_addr": 140479339814912,
+                "pages_count": 66937,
+                "present": 0,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 0,
+                "file_page_or_shared_anon": 0,
+                "undefined": 0
+            },
+            {
+                "start_addr": 140479339814912,
+                "end_addr": 140479339819008,
+                "pages_count": 1,
+                "present": 1,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 1,
+                "file_page_or_shared_anon": 0,
+                "undefined": 0
+            },
+            {
+                "start_addr": 140479339819008,
+                "end_addr": 140479640428544,
+                "pages_count": 73391,
+                "present": 0,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 0,
+                "file_page_or_shared_anon": 0,
+                "undefined": 0
+            },
+            {
+                "start_addr": 140479640428544,
+                "end_addr": 140479640432640,
+                "pages_count": 1,
+                "present": 1,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 1,
+                "file_page_or_shared_anon": 0,
+                "undefined": 0
+            },
+            {
+                "start_addr": 140479640432640,
+                "end_addr": 140479678005248,
+                "pages_count": 9173,
+                "present": 0,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 0,
+                "file_page_or_shared_anon": 0,
+                "undefined": 0
+            },
+            {
+                "start_addr": 140479678005248,
+                "end_addr": 140479678009344,
+                "pages_count": 1,
+                "present": 1,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 1,
+                "file_page_or_shared_anon": 0,
+                "undefined": 0
+            },
+            {
+                "start_addr": 140479678009344,
+                "end_addr": 140479682699264,
+                "pages_count": 1145,
+                "present": 0,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 0,
+                "file_page_or_shared_anon": 0,
+                "undefined": 0
+            },
+            {
+                "start_addr": 140479682699264,
+                "end_addr": 140479682703360,
+                "pages_count": 1,
+                "present": 1,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 1,
+                "file_page_or_shared_anon": 0,
+                "undefined": 0
+            },
+            {
+                "start_addr": 140479682703360,
+                "end_addr": 140479683223552,
+                "pages_count": 127,
+                "present": 0,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 0,
+                "file_page_or_shared_anon": 0,
+                "undefined": 0
+            },
+            {
+                "start_addr": 140479683223552,
+                "end_addr": 140479683616768,
+                "pages_count": 96,
+                "present": 27,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 12,
+                "file_page_or_shared_anon": 0,
+                "undefined": 0
+            },
+            {
+                "start_addr": 140728588464128,
+                "end_addr": 140728588599296,
+                "pages_count": 33,
+                "present": 3,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 3,
+                "file_page_or_shared_anon": 0,
+                "undefined": 0
+            },
+            {
+                "start_addr": 140728589058048,
+                "end_addr": 140728589074432,
+                "pages_count": 4,
+                "present": 0,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 0,
+                "file_page_or_shared_anon": 0,
+                "undefined": 0
+            },
+            {
+                "start_addr": 140728589074432,
+                "end_addr": 140728589082624,
+                "pages_count": 2,
+                "present": 1,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 0,
+                "file_page_or_shared_anon": 1,
+                "undefined": 0
+            },
+            {
+                "start_addr": 18446744073699065856,
+                "end_addr": 18446744073699069952,
+                "pages_count": 1,
+                "present": 0,
+                "swapped": 0,
+                "pte_soft_dirty": 0,
+                "exclusively_mapped": 0,
+                "file_page_or_shared_anon": 0,
+                "undefined": 1
+            }
+        ]
+    },
+    "calculated_metrics": {
+        "cpu_time": 1.06,
+        "virtual_memory_size": 736714752,
+        "resident_memory_size": 13090816,
+        "start_time": "2023-03-28 16:45:35"
+    },
+    "stat": {
+        "PID": 1,
+        "Comm": "backend",
+        "State": "R",
+        "PPID": 0,
+        "PGRP": 1,
+        "Session": 1,
+        "TTY": 0,
+        "TPGID": -1,
+        "Flags": 4194560,
+        "MinFlt": 5552,
+        "CMinFlt": 0,
+        "MajFlt": 0,
+        "CMajFlt": 0,
+        "UTime": 34,
+        "STime": 72,
+        "CUTime": 0,
+        "CSTime": 0,
+        "Priority": 20,
+        "Nice": 0,
+        "NumThreads": 9,
+        "Starttime": 1116779,
+        "VSize": 736714752,
+        "RSS": 3196,
+        "RSSLimit": 18446744073709551615,
+        "Processor": 1,
+        "RTPriority": 0,
+        "Policy": 0,
+        "DelayAcctBlkIOTicks": 0
+    }
+}

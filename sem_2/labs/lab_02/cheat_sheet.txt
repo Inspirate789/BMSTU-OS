@@ -1,0 +1,163 @@
+===================================================== useful links ====================================================
+https://github.com/Sunshine-ki/BMSTU6_OS/tree/main/lab_08/src/part_2
+https://www.swe-notes.ru/post/epoll-intro/
+https://habr.com/ru/post/416669/
+https://copyconstruct.medium.com/the-method-to-epolls-madness-d9d2d6378642
+https://stackoverflow.com/questions/51777259/how-to-code-an-epoll-based-sockets-client-in-c
+https://github.com/onestraw/epoll-example/blob/master/epoll.c
+https://man7.org/linux/man-pages/man7/epoll.7.html
+https://github.com/kingAndGithub/IO-multiplexing/blob/master/server.c
+https://habr.com/ru/company/infopulse/blog/415259/
+https://www.ulduzsoft.com/2014/01/select-poll-epoll-practical-difference-for-system-architects/
+https://stackoverflow.com/questions/1543466/how-do-i-change-a-tcp-socket-to-be-non-blocking
+https://lecturesnet.readthedocs.io/net/low-level/ipc/socket/intro.html
+https://stackoverflow.com/questions/16508685/understanding-inaddr-any-for-socket-programming
+https://beej.us/guide/bgnet/
+https://man7.org/linux/man-pages/man7/ip.7.html
+
+====================================================== man epoll ======================================================
+
+#define MAX_EVENTS 10
+    struct epoll_event ev, events[MAX_EVENTS];
+    int listen_sock, conn_sock, nfds, epollfd;
+
+    /* Code to set up listening socket, 'listen_sock',
+        (socket(), bind(), listen()) omitted. */
+
+    epollfd = epoll_create1(0);
+    if (epollfd == -1) {
+        perror("epoll_create1");
+        exit(EXIT_FAILURE);
+    }
+
+    ev.events = EPOLLIN;
+    ev.data.fd = listen_sock;
+    if (epoll_ctl(epollfd, EPOLL_CTL_ADD, listen_sock, &ev) == -1) {
+        perror("epoll_ctl: listen_sock");
+        exit(EXIT_FAILURE);
+    }
+for (;;) {
+        nfds = epoll_wait(epollfd, events, MAX_EVENTS, -1);
+        if (nfds == -1) {
+            perror("epoll_wait");
+            exit(EXIT_FAILURE);
+        }
+
+        for (n = 0; n < nfds; ++n) {
+            if (events[n].data.fd == listen_sock) {
+                conn_sock = accept(listen_sock,
+                                    (struct sockaddr *) &addr, &addrlen);
+                if (conn_sock == -1) {
+                    perror("accept");
+                    exit(EXIT_FAILURE);
+                }
+                setnonblocking(conn_sock);
+                ev.events = EPOLLIN | EPOLLET;
+                ev.data.fd = conn_sock;
+                if (epoll_ctl(epollfd, EPOLL_CTL_ADD, conn_sock,
+                            &ev) == -1) {
+                    perror("epoll_ctl: conn_sock");
+                    exit(EXIT_FAILURE);
+                }
+            } else {
+                do_use_fd(events[n].data.fd);
+            }
+        }
+    }
+
+======================================================== habr =========================================================
+// Создаём дескриптор epoll. Нам нужен лишь один на всё приложение, он будет мониторить все сокеты
+// Аргумент функции игнорируется (раньше это было не так, но сейчас так), так что напишите здесь своё любимое число
+int pollingfd = epoll_create( 0xCAFE ); 
+
+if ( pollingfd < 0 )
+ // ошибка
+
+// Инициализируем структуру epoll_event
+struct epoll_event ev = { 0 };
+
+// Ассоциируйте соединение с наблюдаемым событием. Вы можете ассоциировать всё, что угодно
+// epoll никак не использует эту информацию. Можно, например, сохранить указатель на объект класса соединения
+ev.data.ptr = pConnection1;
+
+// Наблюдаем события прихода данных, по одному за раз
+ev.events = EPOLLIN | EPOLLONESHOT;
+
+// Добавляем дескриптор в список наблюдаемых. Это можно сделать даже из другого потока
+// пока первый ожидает в вызове epoll_wait - всё сработает правильно
+if ( epoll_ctl( epollfd, EPOLL_CTL_ADD, pConnection1->getSocket(), &ev ) != 0 )
+    // report error
+
+// будем выбирать из очереди событий по 20 событий за раз
+struct epoll_event pevents[ 20 ];
+
+// Ждём 10 секунд
+int ready = epoll_wait( pollingfd, pevents, 20, 10000 );
+
+// Проверяем успешность вызова
+if ( ret == -1 )
+    // ошибка
+else if ( ret == 0 )
+    // таймаут, событий не произошло
+else
+{
+    // просматриваем полученный список событий
+    for ( int i = 0; i < ret; i++ )
+    {
+        if ( pevents[i].events & EPOLLIN )
+        {
+            // получаем ранее ассоциированный с событием указатель на соединение, обрабатываем его
+            Connection * c = (Connection*) pevents[i].data.ptr;
+            c->handleReadEvent();
+         }
+    }
+}
+
+============================================= GitHub tips (not mine!!!!!) =============================================
+
+// Структура для сетевого взаимодействия.
+// struct sockaddr_in
+// {
+// 	short int sin_family;		 // Семейство адресов
+// 	unsigned short int sin_port; // Номер порта (главное отличие от sockaddr)
+// 	struct in_addr sin_addr;	 // IP-адрес хоста.
+// 	unsigned char sin_zero[8];	 // Дополнение до размера структуры sockaddr
+// };
+
+// struct in_addr
+// {
+// 	unsigned long s_addr;
+// };
+
+// AF_INET - открываемый сокет должен быть сетевым.
+// SOCK_STREAM - требование, чтобы сокет был потоковым.
+// 0 - протокол выбирается по умолчанию.
+
+// bind() - связывает сокет с заданным адресом.
+// После вызова bind() программа-сервер становится доступна для соединения по заданному адресу (имени файла)
+
+// listen переводит сервер в режим ожидания запроса на соединение.
+// Второй параметр - максимальное число соединений, которые сервер может обрабатывать одновременно.
+
+// INADDR_ANY - зарегистрировать сервер на всех адресах машины, на которой она выполняется.
+// INADDR_ANY - все адреса локального хоста (0.0.0.0);
+
+// htons() переписывает двухбайтовое значение порта так, чтобы порядок байтов соответствовал сетевому.
+
+//
+// fcntl() + флаг O_NONBLOCK делает его неблокирующим.
+//
+// Сокеты бывают блокирующие и неблокирующие.
+// В случае блокирующих сокетов при попытке прочитать(и записать)
+// данные функция чтения будет ждать до тех пор, пока не прочитает
+// хотя бы один байт или произойдет разрыв соединения или придет сигнал.
+// В случае неблокирующих сокетов функция чтения проверяет,
+// есть ли данные в буфере, и если есть - сразу возвращает,
+// если нет, то она не ждет и также сразу возвращает, что прочитано 0 байт.
+//
+// Теперь любой вызов функции read() для сокета sock_fd будет возвращать управление сразу же.
+// Если на входе сокета нет данных для чтения, функция read() вернет значение EAGAIN.
+// sock_fd = socket(PF_INET, SOCK_STREAM, 0);
+// fcntl(sock_fd, F_SETFL, O_NONBLOCK);
+
+
